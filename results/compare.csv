@@ -1,0 +1,25 @@
+name,test,qos,sent,received,lost_pct,duplicates,out_of_order,lat_min_ms,lat_p50_ms,lat_p95_ms,lat_max_ms,pub_rate_msg_s,session_present,error
+local,online,0,200,200,0.0,0,0,0.92,2.14,3.59,21.84,50.0,,
+local,offline,0,50,0,100.0,,,,,,,,False,
+local,online,1,200,200,0.0,0,0,0.99,2.32,3.79,5.27,50.0,,
+local,offline,1,50,0,100.0,,,,,,,,True,
+local,online,2,200,200,0.0,0,0,1.73,4.63,8.22,12.22,50.0,,
+local,offline,2,50,0,100.0,,,,,,,,False,
+test.mosquitto.org,online,0,,,,,,,,,,,,TimeoutError: no CONNACK from test.mosquitto.org:1883
+test.mosquitto.org,offline,0,,,,,,,,,,,,TimeoutError: no CONNACK from test.mosquitto.org:1883
+test.mosquitto.org,online,1,,,,,,,,,,,,TimeoutError: no CONNACK from test.mosquitto.org:1883
+test.mosquitto.org,offline,1,,,,,,,,,,,,TimeoutError: no CONNACK from test.mosquitto.org:1883
+test.mosquitto.org,online,2,,,,,,,,,,,,TimeoutError: no CONNACK from test.mosquitto.org:1883
+test.mosquitto.org,offline,2,,,,,,,,,,,,TimeoutError: no CONNACK from test.mosquitto.org:1883
+broker.hivemq.com,online,0,200,200,0.0,0,0,53.18,78.82,102.1,137.1,50.0,,
+broker.hivemq.com,offline,0,50,0,100.0,,,,,,,,True,
+broker.hivemq.com,online,1,200,200,0.0,0,0,52.58,153.28,228.38,249.78,49.2,,
+broker.hivemq.com,offline,1,50,50,0.0,,,,,,,,True,
+broker.hivemq.com,online,2,200,200,0.0,0,0,107.79,298.29,392.15,407.67,47.9,,
+broker.hivemq.com,offline,2,50,50,0.0,,,,,,,,True,
+broker.emqx.io,online,0,200,40,80.0,0,0,197.91,302.84,392.83,418.24,50.0,,
+broker.emqx.io,offline,0,50,10,80.0,,,,,,,,True,
+broker.emqx.io,online,1,200,40,80.0,0,0,191.87,222.1,252.66,255.76,49.3,,
+broker.emqx.io,offline,1,50,50,0.0,,,,,,,,True,
+broker.emqx.io,online,2,200,70,65.0,0,0,255.37,1987.88,3947.93,3993.21,24.7,,
+broker.emqx.io,offline,2,50,50,0.0,,,,,,,,True,

@@ -1,0 +1,18 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# runtime
+data/
+logs/
+
+# локально розпакований Mosquitto (відновлюється: bash tools/get_mosquitto.sh)
+tools/mosq/
+tools/debs/
+
+# секрети: паролі, ключі, сертифікати (генеруються: bash broker/setup_secure.sh)
+broker/secure/
+
+# матеріали курсу (викладача)
+*.pdf

@@ -1,0 +1,26 @@
+# ACL: принцип найменших привілеїв.
+# %u = логін клієнта. Логін вузла збігається з його ім'ям у топіку,
+# тож вузол "t-kitchen" може писати ЛИШЕ в iot/home/<room>/t-kitchen/...
+# і не може підробити дані чужого вузла чи надіслати команду вентилятору.
+
+user controller
+topic read  iot/home/+/+/telemetry
+topic read  iot/home/+/+/status
+topic write iot/home/+/+/cmd
+topic write iot/home/alerts
+topic readwrite iot/home/core/controller/status
+
+user dashboard
+topic read iot/home/#
+
+user logger
+topic read iot/home/#
+
+user bench
+topic readwrite bench/#
+
+# правила для всіх інших (вузлів)
+pattern write     iot/home/+/%u/telemetry
+pattern readwrite iot/home/+/%u/status
+pattern read      iot/home/+/%u/cmd
+pattern write     iot/home/+/%u/state

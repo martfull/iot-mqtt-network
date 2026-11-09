@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Обгортка для локально розпакованого Mosquitto (без sudo). Див. tools/get_mosquitto.sh
+D="$(cd "$(dirname "$0")/.." && pwd)/mosq"
+LD_LIBRARY_PATH="$D/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}" exec "$D/usr/sbin/mosquitto" "$@"

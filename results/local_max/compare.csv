@@ -1,0 +1,7 @@
+name,test,qos,sent,received,lost_pct,duplicates,out_of_order,lat_min_ms,lat_p50_ms,lat_p95_ms,lat_max_ms,pub_rate_msg_s,session_present,error
+local,online,0,1000,1000,0.0,0,0,40.95,59.33,60.69,60.85,16105.1,,
+local,offline,0,50,7,86.0,,,,,,,,True,
+local,online,1,1000,1000,0.0,0,0,12.83,313.56,368.52,372.91,2889.2,,
+local,offline,1,50,50,0.0,,,,,,,,True,
+local,online,2,1000,1000,0.0,0,0,33.85,355.86,549.25,556.0,1771.9,,
+local,offline,2,50,50,0.0,,,,,,,,True,
