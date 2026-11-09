@@ -2,7 +2,10 @@
 
 Слухає телеметрію всіх кімнат (wildcard iot/<site>/+/+/telemetry) і статуси
 вузлів. Правила:
-  * temperature > ON_T  -> вентилятор кімнати ON;  < OFF_T -> OFF (гістерезис);
+  * temperature > ON_T  -> вентилятори кімнати ON;  < OFF_T -> OFF (гістерезис);
+  * вентилятори кімнати визначаються автоматично - це вузли, що публікують
+    retained .../state (напр. fan-kitchen або esp32-lab); якщо таких ще немає,
+    команда йде вузлу <fan-prefix><room>;
   * вузол перейшов у "offline" (LWT) -> тривога в iot/<site>/alerts (QoS 2).
 
 Приклад:  python -m iotnet.controller --on 26 --off 24
@@ -25,6 +28,7 @@ def main():
 
     site = config.SITE
     fan_on: dict[str, bool] = {}
+    actuators: dict[str, set[str]] = {}     # room -> вузли-виконавці (за топіком state)
 
     c = config.make_client(client_id="controller")
     c.will_set(config.node_topic("core", "controller", "status"), "offline", qos=1, retain=True)
@@ -39,7 +43,8 @@ def main():
         client.publish(config.node_topic("core", "controller", "status"), "online",
                        qos=1, retain=True)
         client.subscribe([(f"{config.ROOT}/{site}/+/+/telemetry", 1),
-                          (f"{config.ROOT}/{site}/+/+/status", 1)])
+                          (f"{config.ROOT}/{site}/+/+/status", 1),
+                          (f"{config.ROOT}/{site}/+/+/state", 1)])
 
     def on_message(client, userdata, msg):
         parsed = config.parse_node_topic(msg.topic)
@@ -47,6 +52,11 @@ def main():
             return
         _, room, node, kind = parsed
         if room == "core":
+            return
+        if kind == "state":
+            if node not in actuators.setdefault(room, set()):
+                actuators[room].add(node)
+                print(f"[controller] виконавець {room}/{node}")
             return
         if kind == "status":
             if msg.payload == b"offline" and not msg.retain:
@@ -62,7 +72,9 @@ def main():
         if want != on:
             fan_on[room] = want
             cmd = {"power": "on" if want else "off", "reason": f"t={t:.1f}°C"}
-            client.publish(config.node_topic(room, args.fan_prefix + room, "cmd"), json.dumps(cmd), qos=1)
+            for fan in sorted(actuators.get(room) or {args.fan_prefix + room}):
+                client.publish(config.node_topic(room, fan, "cmd"), json.dumps(cmd), qos=1)
+            print(f"[controller] {room}: fan {cmd['power']} ({cmd['reason']})")
             if want and t > args.on + 5:
                 alert(client, "critical", f"перегрів у {room}: {t:.1f}°C", room=room, value=t)
 

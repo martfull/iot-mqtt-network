@@ -6,6 +6,7 @@
 user controller
 topic read  iot/home/+/+/telemetry
 topic read  iot/home/+/+/status
+topic read  iot/home/+/+/state
 topic write iot/home/+/+/cmd
 topic write iot/home/alerts
 topic readwrite iot/home/core/controller/status

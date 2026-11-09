@@ -1,0 +1,5 @@
+# Конфігурація для VS Code-розширення Wokwi та wokwi-cli
+[wokwi]
+version = 1
+firmware = 'build/sketch.ino.merged.bin'
+elf = 'build/sketch.ino.elf'

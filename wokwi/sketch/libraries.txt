@@ -1,0 +1,4 @@
+# Бібліотеки для wokwi.com (вкладка Library Manager підхопить їх автоматично)
+PubSubClient
+ArduinoJson
+DHT sensor library for ESPx

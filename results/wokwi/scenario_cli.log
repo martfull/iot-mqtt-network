@@ -1,0 +1,26 @@
+Wokwi CLI v0.29.1 (0aa185144b92)
+Connected to Wokwi Simulation API 1.0.0-20261105-ge2e75a5d
+Starting simulation...
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:4832
+load:0x40078000,len:16460
+load:0x40080400,len:4
+load:0x40080404,len:3504
+entry 0x400805cc
+[wifi] connecting to Wokwi-GUEST. ok, IP=10.13.37.2
+[mqtt] connecting
+[Cloud fan control: ESP32 <-> HiveMQ <-> controller] Expected text matched: "[mqtt] connecting"
+ to broker.hivemq.com:1883 as martfull-esp32-lab-c40a24 ... ok
+[tele] {"node":"esp32-lab","room":"lab","seq":1,"temperature":24,"humidity":45,"rssi":-74}
+[fan] power -> on
+[Cloud fan control: ESP32 <-> HiveMQ <-> controller] Expected text matched: "power -> on"
+ (t=24.0°C)
+[tele] {"node":"esp32-lab","room":"lab","seq":2,"temperature":18,"humidity":45,"rssi":-98}
+[fan] power -> off
+[Cloud fan control: ESP32 <-> HiveMQ <-> controller] Expected text matched: "power -> off"
+[Cloud fan control: ESP32 <-> HiveMQ <-> controller] Scenario completed successfully

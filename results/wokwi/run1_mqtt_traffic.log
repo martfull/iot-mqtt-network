@@ -1,0 +1,29 @@
+iot/martfull/core/controller/status offline
+iot/martfull/core/controller/status online
+iot/martfull/lab/esp32-lab/status online
+iot/martfull/lab/esp32-lab/state {"power":"off","changed":0,"reason":"boot"}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":1,"temperature":24,"humidity":45,"rssi":-84}
+iot/martfull/lab/esp32-lab/cmd {"power": "on", "reason": "t=24.0\u00b0C"}
+iot/martfull/lab/esp32-lab/state {"power":"on","changed":0,"reason":"t=24.0°C"}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":2,"ts":1.794217374e9,"temperature":24,"humidity":45,"rssi":-71}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":3,"ts":1.794217376e9,"temperature":24,"humidity":45,"rssi":-60}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":4,"ts":1.794217378e9,"temperature":24,"humidity":45,"rssi":-84}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":5,"ts":1.79421738e9,"temperature":24,"humidity":45,"rssi":-81}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":6,"ts":1.794217382e9,"temperature":24,"humidity":45,"rssi":-79}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":7,"ts":1.794217384e9,"temperature":24,"humidity":45,"rssi":-85}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":8,"ts":1.794217386e9,"temperature":24,"humidity":45,"rssi":-87}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":9,"ts":1.794217388e9,"temperature":24,"humidity":45,"rssi":-98}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":10,"ts":1.79421739e9,"temperature":24,"humidity":45,"rssi":-86}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":11,"ts":1.794217392e9,"temperature":24,"humidity":45,"rssi":-72}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":12,"ts":1.794217394e9,"temperature":24,"humidity":45,"rssi":-93}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":13,"ts":1.794217396e9,"temperature":24,"humidity":45,"rssi":-64}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":14,"ts":1.794217398e9,"temperature":24,"humidity":45,"rssi":-96}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":15,"ts":1.7942174e9,"temperature":24,"humidity":45,"rssi":-84}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":16,"ts":1.794217402e9,"temperature":24,"humidity":45,"rssi":-96}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":17,"ts":1.794217404e9,"temperature":24,"humidity":45,"rssi":-70}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":18,"ts":1.794217406e9,"temperature":24,"humidity":45,"rssi":-90}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":19,"ts":1.794217408e9,"temperature":24,"humidity":45,"rssi":-86}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":20,"ts":1.79421741e9,"temperature":24,"humidity":45,"rssi":-89}
+iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":21,"ts":1.794217412e9,"temperature":24,"humidity":45,"rssi":-95}
+iot/martfull/lab/esp32-lab/status offline
+iot/martfull/alerts {"ts": 1794217558.0708382, "level": "warning", "text": "\u0432\u0443\u0437\u043e\u043b lab/esp32-lab \u043e\u0444\u043b\u0430\u0439\u043d", "room": "lab", "node": "esp32-lab"}

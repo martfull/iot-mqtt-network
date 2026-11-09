@@ -1,0 +1,35 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:4832
+load:0x40078000,len:16460
+load:0x40080400,len:4
+load:0x40080404,len:3504
+entry 0x400805cc
+[wifi] connecting to Wokwi-GUEST. ok, IP=10.13.37.2
+[mqtt] connecting to broker.hivemq.com:1883 as martfull-esp32-lab-c40a24 ... ok
+[tele] {"node":"esp32-lab","room":"lab","seq":1,"temperature":24,"humidity":45,"rssi":-84}
+[fan] power -> on (t=24.0°C)
+[tele] {"node":"esp32-lab","room":"lab","seq":2,"ts":1.794217374e9,"temperature":24,"humidity":45,"rssi":-71}
+[tele] {"node":"esp32-lab","room":"lab","seq":3,"ts":1.794217376e9,"temperature":24,"humidity":45,"rssi":-60}
+[tele] {"node":"esp32-lab","room":"lab","seq":4,"ts":1.794217378e9,"temperature":24,"humidity":45,"rssi":-84}
+[tele] {"node":"esp32-lab","room":"lab","seq":5,"ts":1.79421738e9,"temperature":24,"humidity":45,"rssi":-81}
+[tele] {"node":"esp32-lab","room":"lab","seq":6,"ts":1.794217382e9,"temperature":24,"humidity":45,"rssi":-79}
+[tele] {"node":"esp32-lab","room":"lab","seq":7,"ts":1.794217384e9,"temperature":24,"humidity":45,"rssi":-85}
+[tele] {"node":"esp32-lab","room":"lab","seq":8,"ts":1.794217386e9,"temperature":24,"humidity":45,"rssi":-87}
+[tele] {"node":"esp32-lab","room":"lab","seq":9,"ts":1.794217388e9,"temperature":24,"humidity":45,"rssi":-98}
+[tele] {"node":"esp32-lab","room":"lab","seq":10,"ts":1.79421739e9,"temperature":24,"humidity":45,"rssi":-86}
+[tele] {"node":"esp32-lab","room":"lab","seq":11,"ts":1.794217392e9,"temperature":24,"humidity":45,"rssi":-72}
+[tele] {"node":"esp32-lab","room":"lab","seq":12,"ts":1.794217394e9,"temperature":24,"humidity":45,"rssi":-93}
+[tele] {"node":"esp32-lab","room":"lab","seq":13,"ts":1.794217396e9,"temperature":24,"humidity":45,"rssi":-64}
+[tele] {"node":"esp32-lab","room":"lab","seq":14,"ts":1.794217398e9,"temperature":24,"humidity":45,"rssi":-96}
+[tele] {"node":"esp32-lab","room":"lab","seq":15,"ts":1.7942174e9,"temperature":24,"humidity":45,"rssi":-84}
+[tele] {"node":"esp32-lab","room":"lab","seq":16,"ts":1.794217402e9,"temperature":24,"humidity":45,"rssi":-96}
+[tele] {"node":"esp32-lab","room":"lab","seq":17,"ts":1.794217404e9,"temperature":24,"humidity":45,"rssi":-70}
+[tele] {"node":"esp32-lab","room":"lab","seq":18,"ts":1.794217406e9,"temperature":24,"humidity":45,"rssi":-90}
+[tele] {"node":"esp32-lab","room":"lab","seq":19,"ts":1.794217408e9,"temperature":24,"humidity":45,"rssi":-86}
+[tele] {"node":"esp32-lab","room":"lab","seq":20,"ts":1.79421741e9,"temperature":24,"humidity":45,"rssi":-89}
+[tele] {"node":"esp32-lab","room":"lab","seq":21,"ts":1.794217412e9,"temperature":24,"humidity":45,"rssi":-95}

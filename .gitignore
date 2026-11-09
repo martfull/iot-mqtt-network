@@ -16,3 +16,6 @@ broker/secure/
 
 # матеріали курсу (викладача)
 *.pdf
+
+# збірка прошивки ESP32 (arduino-cli compile ... --output-dir wokwi/sketch/build)
+wokwi/sketch/build/

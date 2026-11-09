@@ -46,7 +46,9 @@ def make_client(client_id: str | None = None, host: str | None = None,
                 port: int | None = None, user: str | None = None,
                 password: str | None = None, clean_session: bool = True) -> mqtt.Client:
     """Створює клієнта paho-mqtt (API v2) з облікові даними з env за потреби."""
-    cid = client_id or f"iot-{uuid.uuid4().hex[:8]}"
+    # префікс сайту: на публічному брокері ID на кшталт "controller" можуть збігтися з чужими,
+    # а брокер відключає старого клієнта з тим самим ID
+    cid = f"{SITE}-{client_id}" if client_id else f"{SITE}-{uuid.uuid4().hex[:8]}"
     c = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id=cid,
                     clean_session=clean_session)
     u = user if user is not None else MQTT_USER

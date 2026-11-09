@@ -1,0 +1,11 @@
+10:46:44.515 iot/martfull/lab/esp32-lab/state {"power":"on","changed":0,"reason":"t=24.0°C"}
+10:46:44.517 iot/martfull/core/controller/status offline
+10:46:44.519 iot/martfull/lab/esp32-lab/status offline
+10:46:44.622 iot/martfull/core/controller/status online
+10:47:01.046 iot/martfull/lab/esp32-lab/status online
+10:47:01.200 iot/martfull/lab/esp32-lab/state {"power":"off","changed":0,"reason":"boot"}
+10:47:01.369 iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":1,"temperature":24,"humidity":45,"rssi":-74}
+10:47:01.422 iot/martfull/lab/esp32-lab/cmd {"power": "on", "reason": "t=24.0\u00b0C"}
+10:47:02.173 iot/martfull/lab/esp32-lab/state {"power":"on","changed":0,"reason":"t=24.0°C"}
+10:47:12.579 iot/martfull/lab/esp32-lab/telemetry {"node":"esp32-lab","room":"lab","seq":2,"temperature":18,"humidity":45,"rssi":-98}
+10:47:12.632 iot/martfull/lab/esp32-lab/cmd {"power": "off", "reason": "t=18.0\u00b0C"}

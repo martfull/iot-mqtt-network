@@ -1,0 +1,12 @@
+# Автоматичний сценарій для wokwi-cli (потрібен контролер на ПК: ON=23 OFF=22 ./run_cloud.sh)
+#   wokwi-cli wokwi/sketch --scenario scenario.yaml --timeout 120000
+name: 'Cloud fan control: ESP32 <-> HiveMQ <-> controller'
+version: 1
+steps:
+  - wait-serial: '[mqtt] connecting'
+  - wait-serial: 'power -> on'        # DHT22 = 24°C > 23°C: контролер вмикає вентилятор
+  - set-control:
+      part-id: dht1
+      control: temperature
+      value: 18                       # охолодження нижче порога вимкнення 22°C
+  - wait-serial: 'power -> off'

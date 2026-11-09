@@ -1,0 +1,4 @@
+[controller] connected rc=Success
+[controller] виконавець lab/esp32-lab
+[controller] lab: fan on (t=24.0°C)
+[controller] lab: fan off (t=18.0°C)
